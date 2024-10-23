@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node dist/app.js",
     "build": "tsc",
-    "dev": "ts-node src/app.ts"
+    "dev": "ts-node src/app.ts",
+    "format": "npx @biomejs/biome check --write ./src/",
+    "prepare": "git config --local core.hooksPath .hooks/"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "node": ">=18"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@types/body-parser": "^1.19.5",
     "@types/express": "^5.0.0",
     "@types/node": "^22.7.7",
