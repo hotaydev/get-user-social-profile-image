@@ -1,0 +1,7 @@
+POST http://localhost:3000/get-image HTTP/2.0
+content-type: application/json
+
+{
+  "account_type": "gravatar",
+  "identifier": "user_email" // Example: example@email.com
+}
