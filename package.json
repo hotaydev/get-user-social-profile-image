@@ -8,7 +8,7 @@
     "build": "tsc",
     "dev": "ts-node src/app.ts",
     "format": "npx @biomejs/biome check --write ./src/",
-    "prepare": "git config --local core.hooksPath .hooks/"
+    "prepare": "if [ -d .git ]; then git config --local core.hooksPath .hooks/; fi"
   },
   "keywords": [],
   "author": "",
