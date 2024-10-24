@@ -10,7 +10,7 @@ A small Node.js Express API that retrieves user profile avatar pictures from var
 ## API Endpoint
 
 ### Request
-Send a POST request to `/get-image` with the following JSON body:
+Send a POST request to `/` with the following JSON body:
 
 ```json
 {

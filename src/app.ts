@@ -20,7 +20,7 @@ const accountTypes = ["mastodon", "gravatar", "github"];
  */
 
 // biome-ignore lint/suspicious/noExplicitAny: return type is kinda difficult with the newest versions of express :/
-app.post("/get-image", async (req: Request, res: Response): Promise<any> => {
+app.post("/", async (req: Request, res: Response): Promise<any> => {
 	const { account_type, identifier } = req.body; // Destructure account_type and identifier from the request body
 
 	// Validate that both account_type and identifier are present in the request
@@ -65,6 +65,10 @@ app.post("/get-image", async (req: Request, res: Response): Promise<any> => {
 		success: true,
 		photo: photo,
 	});
+});
+
+app.get("/", (_req, res) => {
+	res.send("https://github.com/hotaydev/get-user-social-profile-image");
 });
 
 /**
