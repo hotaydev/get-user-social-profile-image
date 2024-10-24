@@ -51,6 +51,11 @@ The API responds with a JSON object:
    pnpm dev
    ```
 
+## Advices:
+
+Never let an exposed API without rate-limiting. Never.
+As this API doesn't implement a rate-limiting at code level, it can be easily implemented through WAF (Web Application Firewall) rules. You can implement it for free using [Cloudflare WAF](https://www.cloudflare.com/pt-br/application-services/products/waf/).
+
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
